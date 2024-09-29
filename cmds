@@ -1,0 +1,26 @@
+# Nesne tanımlama
+object MyCircle {
+    shape: circle;
+    size: 50;
+    color: red;
+    position: (100, 100);
+}
+
+# Animasyon ayarları
+animation MoveCircle {
+    target: MyCircle;
+    property: position;
+    from: (100, 100);
+    to: (400, 100);
+    duration: 2000;  # Animasyon süresi milisaniye cinsinden
+    easing: linear;
+}
+
+# Sahneyi başlat
+scene StartScene {
+    objects: [MyCircle];
+    animations: [MoveCircle];
+}
+
+# Animasyonu başlat
+run StartScene;
